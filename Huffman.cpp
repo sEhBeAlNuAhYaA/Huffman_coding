@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <fstream>
 #include <string>
 #include "Huffman_Tree.h"
 
@@ -15,7 +14,6 @@ int main() {
 	encode.getHuffmanCode();
 	encode.PrintHuffmanCodeTable();
 	encode.PrintEncodeText(input_text);
-
-
+	encode.WriteInFile("decoder\\out.txt");
 	return 0;
 }

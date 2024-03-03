@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
 namespace textsorting {
 	
@@ -25,6 +26,7 @@ public:
 	std::vector <std::pair<std::string, std::string>> getHuffmanCode();	
 	void PrintHuffmanCodeTable();
 	void PrintEncodeText(std::string input_text);
+	void WriteInFile(std::string);
 private:
 	void Fill_Vector(std::vector <std::pair <std::string, int>> vector);
 	Node* Nodes_addition(Node* node1, Node* node2);

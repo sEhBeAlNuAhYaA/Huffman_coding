@@ -125,4 +125,10 @@ void Huffman_Encoding::PrintEncodeText(std::string input_text) {
 			return vec.first == str; }))].second << " ";
 	}
 }
-
+void Huffman_Encoding::WriteInFile(std::string file_name) {
+	std::ofstream file_out(file_name);
+	for (auto el : this->Table) {
+		file_out << el.first << ":" << el.second;
+	}
+	file_out.close();
+}
