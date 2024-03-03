@@ -34,7 +34,7 @@ public:
 				}
 			}
 		}
-		std::cout << answer;
+		std::cout << answer << std::endl;
 	}
 
 };
