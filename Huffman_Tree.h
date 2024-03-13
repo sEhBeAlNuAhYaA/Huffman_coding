@@ -27,6 +27,7 @@ public:
 	void PrintHuffmanCodeTable();
 	void PrintEncodeText(std::string input_text);
 	void WriteInFile(std::string);
+	float Entropy_Counter(std::vector <std::pair <std::string, int>> vector);
 private:
 	void Fill_Vector(std::vector <std::pair <std::string, int>> vector);
 	Node* Nodes_addition(Node* node1, Node* node2);

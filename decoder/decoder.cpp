@@ -47,6 +47,6 @@ int main() {
 
 	Huffman_Decoder decoder;
 	decoder.Parsing(file_in_table);
-	decoder.Decoding("00100010101110110101111101101100");
+	decoder.Decoding("111100011010101100");
 	return 0;
 }

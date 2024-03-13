@@ -132,3 +132,19 @@ void Huffman_Encoding::WriteInFile(std::string file_name) {
 	}
 	file_out.close();
 }
+float Huffman_Encoding::Entropy_Counter(std::vector <std::pair <std::string, int>> vector) {
+	int sum = 0;
+	int Pi = 0;
+	float answer = 0;
+	std::vector <float> propability;
+	for (auto el : vector) {
+		sum += el.second;
+	}
+	for (auto el : vector){
+		propability.push_back((float)el.second / (float)sum);
+		answer -= propability[propability.size()-1] * log2(propability[propability.size()-1]);
+
+	}
+	
+	return answer;
+}

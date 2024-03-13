@@ -9,8 +9,9 @@ int main() {
 	std::string input_text;
 	std::cout << "Input text: ";
 	std::getline(std::cin, input_text);
-	
+
 	encode.Encoding(textsorting::count_frequency(input_text));
+	std::cout << encode.Entropy_Counter(textsorting::count_frequency(input_text)) << std::endl;
 	encode.getHuffmanCode();
 	encode.PrintHuffmanCodeTable();
 	encode.PrintEncodeText(input_text);
